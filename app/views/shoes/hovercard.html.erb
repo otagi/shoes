@@ -1,0 +1,8 @@
+<aside class="hovercard" data-hovercard-target="card">
+  <article class="shoe">
+    <h1><%= @shoe.name %></h1>
+    <p><%= @shoe.brand %></p>
+    <p><%= @shoe.colorway %> • <%= number_to_currency(@shoe.price) %></p>
+    <%= image_tag @shoe.image, alt: @shoe.name %>
+  </article>
+</aside>

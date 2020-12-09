@@ -1,25 +1,20 @@
 class ShoesController < ApplicationController
-  before_action :set_shoe, only: [:show, :edit, :update, :destroy]
+  before_action :set_shoe, only: [:show, :edit, :update, :destroy, :hovercard]
 
-  # GET /shoes
   def index
     @shoes = Shoe.all
   end
 
-  # GET /shoes/1
   def show
   end
 
-  # GET /shoes/new
   def new
     @shoe = Shoe.new
   end
 
-  # GET /shoes/1/edit
   def edit
   end
 
-  # POST /shoes
   def create
     @shoe = Shoe.new(shoe_params)
 
@@ -30,7 +25,6 @@ class ShoesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /shoes/1
   def update
     if @shoe.update(shoe_params)
       redirect_to @shoe, notice: 'Shoe was successfully updated.'
@@ -39,10 +33,13 @@ class ShoesController < ApplicationController
     end
   end
 
-  # DELETE /shoes/1
   def destroy
     @shoe.destroy
     redirect_to shoes_url, notice: 'Shoe was successfully destroyed.'
+  end
+
+  def hovercard
+    render layout: false
   end
 
   private

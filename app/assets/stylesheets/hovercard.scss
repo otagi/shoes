@@ -1,0 +1,19 @@
+.hovercard {
+  position: absolute;
+  bottom: 2.5em;
+  left: 0;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0px 5px 10px #ccc;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 1rem;
+    border-style: solid;
+    border-width: 0.5rem;
+    border-color: white transparent transparent transparent;
+  }
+}
