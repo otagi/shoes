@@ -3,6 +3,6 @@
     <h1><%= @shoe.name %></h1>
     <p><%= @shoe.brand %></p>
     <p><%= @shoe.colorway %> • <%= number_to_currency(@shoe.price) %></p>
-    <%= image_tag @shoe.image, alt: @shoe.name %>
+    <%= image_tag @shoe.image.variant(resize_to_limit: [150, 100]), alt: @shoe.name %>
   </article>
 </aside>
